@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2941479025513593145}
   - component: {fileID: 2941479025513593146}
   - component: {fileID: 2941479025513593147}
+  - component: {fileID: 3680395619250552670}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -99,6 +100,19 @@ MonoBehaviour:
   isLadder: 0
   isjump: 0
   action: 101
+--- !u!114 &3680395619250552670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941479025513593148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8152e9b76c11f6d408ae294dbd382814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alcohol: 0
 --- !u!1 &2941479026197077360
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 46846f3518a75ec4ba03ad627fae255a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -10,7 +10,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField]
     private Transform endPosition;
     [SerializeField]
-    private float stepMove = 1;
+    private float stepMoveCamera = 1;
     private float speedMove;
     
 
@@ -23,7 +23,7 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        speedMove = stepMove * Time.deltaTime;
+        speedMove = stepMoveCamera * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, endPosition.position, speedMove);
         transform.position = new Vector3(transform.position.x, transform.position.y,-10);
     }
