@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class Drunking : MonoBehaviour
 {
-   [SerializeField] private Sprite spr, spr1, spr2, spr3;
-    public GameObject img;
-
+   [SerializeField] private Sprite spr1, spr2, spr3;
+    [SerializeField] private GameObject SpritePlayer;
+    private Alcohol alcohol;
     // Start is called before the first frame update
     void Start()
     {
-        img = GameObject.Find("ClassImage");
-        spr = img.GetComponent<SpriteRenderer>().sprite;
-        spr1 = Resources.Load<Sprite>("not");
-        spr2 = Resources.Load<Sprite>("drink");
-        spr3 = Resources.Load<Sprite>("drunk");
+        alcohol = GetComponent<Alcohol>();
+    }
+     void Update()
+    {
+          //условие для замены спрайта
 
-        //условие для замены спрайта
-
-        /* if (GameManager.sliderAlcohol.value < 20) {
-             img.GetComponent<SpriteRenderer>().sprite = spr1;
+         if (alcohol.alcohol < 0.3f) {
+             SpritePlayer.GetComponent<SpriteRenderer>().sprite = spr1;
          }
-         if (GameManager.sliderAlcohol.value < 50) {
-                 img.GetComponent <SpriteRenderer> ().sprite = spr2;
+         if (alcohol.alcohol > 0.5f) {
+            SpritePlayer.GetComponent <SpriteRenderer> ().sprite = spr2;
              }
-             else img.GetComponent<SpriteRenderer>().sprite = spr3;*/
+        if (alcohol.alcohol > 0.8f)
+        {
+            SpritePlayer.GetComponent<SpriteRenderer>().sprite = spr3;
+        }
+      
+       
+
+      
     }
 }
