@@ -15,14 +15,15 @@ public class Drunking : MonoBehaviour
         spr1 = Resources.Load<Sprite>("not");
         spr2 = Resources.Load<Sprite>("drink");
         spr3 = Resources.Load<Sprite>("drunk");
-        Debug.Log(spr);
- 
-        if (spr = spr3) {
-            img.GetComponent<SpriteRenderer>().sprite = spr1;
-        }
-        if (spr = spr1) {
-                img.GetComponent <SpriteRenderer> ().sprite = spr2;
-            }
-            else img.GetComponent<SpriteRenderer>().sprite = spr3;
+
+        //условие для замены спрайта
+
+        /* if (GameManager.sliderAlcohol.value < 20) {
+             img.GetComponent<SpriteRenderer>().sprite = spr1;
+         }
+         if (GameManager.sliderAlcohol.value < 50) {
+                 img.GetComponent <SpriteRenderer> ().sprite = spr2;
+             }
+             else img.GetComponent<SpriteRenderer>().sprite = spr3;*/
     }
 }
